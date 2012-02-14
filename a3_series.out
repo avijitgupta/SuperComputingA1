@@ -1,0 +1,30 @@
+TACC: Setting memory limits for job 457717 to unlimited KB
+TACC: Dumping job script:
+--------------------------------------------------------------------------------
+#!/bin/bash
+
+#$ -V
+#$ -cwd
+#$ -q development
+#$ -pe 12way 12
+#$ -N a3_series
+#$ -o a3_series.out
+#$ -e a3_series.err
+#$ -M mailforavijit@gmail.com
+#$ -m be
+#$ -l h_rt=01:00:00
+
+export PATH=$PATH:$HOME/cilk/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/cilk/lib
+cilkview 3_100
+cilkview 3_1000
+cilkview 3_10000
+cilkview 3_100000
+--------------------------------------------------------------------------------
+TACC: Done.
+cilkview: generating scalability data
+cilkview: generating scalability data
+cilkview: generating scalability data
+cilkview: generating scalability data
+TACC: Cleaning up after job: 457717
+TACC: Done.
