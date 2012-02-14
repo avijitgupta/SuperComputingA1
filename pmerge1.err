@@ -1,0 +1,386 @@
+Statistics for dump-normalM105
+
+1) Parallelism Profile
+   Work :					 85441353 instructions
+   Span :					 4512213 instructions
+   Burdened span :				 4512213 instructions
+   Parallelism :				 18.94
+   Burdened parallelism :			 18.94
+   Number of spawns/syncs:			 99999
+   Average instructions / strand :		 284
+   Strands along span :				 17
+   Average instructions / strand on span :	 265424
+   Total number of atomic instructions : 	 1028
+   Frame count :				 399997
+2) Speedup Estimate
+  2 procs:		 1.84 - 2.00
+  4 procs:		 3.15 - 4.00
+  8 procs:		 4.91 - 8.00
+  16 procs:		 6.82 - 16.00
+  32 procs:		 8.46 - 18.94
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 110,537,929 instructions
+   Span :					 8,213,917 instructions
+   Burdened span :				 8,725,495 instructions
+   Parallelism :				 13.46
+   Burdened parallelism :			 12.67
+   Number of spawns/syncs:			 199,998
+   Average instructions / strand :		 184
+   Strands along span :				 69
+   Average instructions / strand on span :	 119,042
+   Total number of atomic instructions : 	 1,046
+   Frame count :				 600001
+2) Speedup Estimate
+   2 processors:	 1.76 - 2.00
+   4 processors:	 2.85 - 4.00
+   8 processors:	 4.13 - 8.00
+   16 processors:	 5.31 - 13.46
+   32 processors:	 6.20 - 13.46
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 18.935576 notitle lt 2, "dump-normalM105.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-normalM105.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                         ^
+         "dump-normalM105.plt", line 10: no data point found in specified file
+
+Statistics for dump-normalM104
+
+1) Parallelism Profile
+   Work :					 7801306 instructions
+   Span :					 460825 instructions
+   Burdened span :				 460825 instructions
+   Parallelism :				 16.93
+   Burdened parallelism :			 16.93
+   Number of spawns/syncs:			 9999
+   Average instructions / strand :		 260
+   Strands along span :				 14
+   Average instructions / strand on span :	 32916
+   Total number of atomic instructions : 	 134
+   Frame count :				 39997
+2) Speedup Estimate
+  2 procs:		 1.82 - 2.00
+  4 procs:		 3.07 - 4.00
+  8 procs:		 4.70 - 8.00
+  16 procs:		 6.38 - 16.00
+  32 procs:		 7.78 - 16.93
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 13,643,496 instructions
+   Span :					 4,164,877 instructions
+   Burdened span :				 4,586,944 instructions
+   Parallelism :				 3.28
+   Burdened parallelism :			 2.97
+   Number of spawns/syncs:			 19,998
+   Average instructions / strand :		 227
+   Strands along span :				 55
+   Average instructions / strand on span :	 75,725
+   Total number of atomic instructions : 	 156
+   Frame count :				 60001
+2) Speedup Estimate
+   2 processors:	 1.27 - 2.00
+   4 processors:	 1.47 - 3.28
+   8 processors:	 1.60 - 3.28
+   16 processors:	 1.67 - 3.28
+   32 processors:	 1.71 - 3.28
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+cilkview error: unable to open file: m_4_105
+Statistics for dump-normalM103
+
+1) Parallelism Profile
+   Work :					 704210 instructions
+   Span :					 51486 instructions
+   Burdened span :				 51486 instructions
+   Parallelism :				 13.68
+   Burdened parallelism :			 13.68
+   Number of spawns/syncs:			 999
+   Average instructions / strand :		 234
+   Strands along span :				 10
+   Average instructions / strand on span :	 5148
+   Total number of atomic instructions : 	 10
+   Frame count :				 3997
+2) Speedup Estimate
+  2 procs:		 1.78 - 2.00
+  4 procs:		 2.91 - 4.00
+  8 procs:		 4.28 - 8.00
+  16 procs:		 5.59 - 13.68
+  32 procs:		 6.59 - 13.68
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 4,618,917 instructions
+   Span :					 3,753,414 instructions
+   Burdened span :				 4,056,249 instructions
+   Parallelism :				 1.23
+   Burdened parallelism :			 1.14
+   Number of spawns/syncs:			 1,998
+   Average instructions / strand :		 770
+   Strands along span :				 41
+   Average instructions / strand on span :	 91,546
+   Total number of atomic instructions : 	 32
+   Frame count :				 6001
+2) Speedup Estimate
+   2 processors:	 0.80 - 1.23
+   4 processors:	 0.73 - 1.23
+   8 processors:	 0.70 - 1.23
+   16 processors:	 0.68 - 1.23
+   32 processors:	 0.68 - 1.23
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 13.677699 notitle lt 2, "dump-normalM103.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-normalM103.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                         ^
+         "dump-normalM103.plt", line 10: no data point found in specified file
+
+Statistics for dump-normalM104
+
+1) Parallelism Profile
+   Work :					 7802112 instructions
+   Span :					 460944 instructions
+   Burdened span :				 460944 instructions
+   Parallelism :				 16.93
+   Burdened parallelism :			 16.93
+   Number of spawns/syncs:			 9999
+   Average instructions / strand :		 260
+   Strands along span :				 14
+   Average instructions / strand on span :	 32924
+   Total number of atomic instructions : 	 134
+   Frame count :				 39997
+2) Speedup Estimate
+  2 procs:		 1.82 - 2.00
+  4 procs:		 3.07 - 4.00
+  8 procs:		 4.70 - 8.00
+  16 procs:		 6.38 - 16.00
+  32 procs:		 7.78 - 16.93
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 13,643,002 instructions
+   Span :					 4,163,696 instructions
+   Burdened span :				 4,585,672 instructions
+   Parallelism :				 3.28
+   Burdened parallelism :			 2.98
+   Number of spawns/syncs:			 19,998
+   Average instructions / strand :		 227
+   Strands along span :				 55
+   Average instructions / strand on span :	 75,703
+   Total number of atomic instructions : 	 156
+   Frame count :				 60001
+2) Speedup Estimate
+   2 processors:	 1.27 - 2.00
+   4 processors:	 1.47 - 3.28
+   8 processors:	 1.60 - 3.28
+   16 processors:	 1.67 - 3.28
+   32 processors:	 1.71 - 3.28
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 16.926377 notitle lt 2, "dump-normalM104.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-normalM104.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                         ^
+         "dump-normalM104.plt", line 10: no data point found in specified file
+
+Statistics for dump-normalM105
+
+1) Parallelism Profile
+   Work :					 85440790 instructions
+   Span :					 4512170 instructions
+   Burdened span :				 4512170 instructions
+   Parallelism :				 18.94
+   Burdened parallelism :			 18.94
+   Number of spawns/syncs:			 99999
+   Average instructions / strand :		 284
+   Strands along span :				 17
+   Average instructions / strand on span :	 265421
+   Total number of atomic instructions : 	 1028
+   Frame count :				 399997
+2) Speedup Estimate
+  2 procs:		 1.84 - 2.00
+  4 procs:		 3.15 - 4.00
+  8 procs:		 4.91 - 8.00
+  16 procs:		 6.82 - 16.00
+  32 procs:		 8.46 - 18.94
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 110,539,816 instructions
+   Span :					 8,216,324 instructions
+   Burdened span :				 8,728,148 instructions
+   Parallelism :				 13.45
+   Burdened parallelism :			 12.66
+   Number of spawns/syncs:			 199,998
+   Average instructions / strand :		 184
+   Strands along span :				 69
+   Average instructions / strand on span :	 119,077
+   Total number of atomic instructions : 	 1,046
+   Frame count :				 600001
+2) Speedup Estimate
+   2 processors:	 1.76 - 2.00
+   4 processors:	 2.85 - 4.00
+   8 processors:	 4.12 - 8.00
+   16 processors:	 5.31 - 13.45
+   32 processors:	 6.20 - 13.45
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+Statistics for dump-normalM103
+
+1) Parallelism Profile
+   Work :					 704294 instructions
+   Span :					 51424 instructions
+   Burdened span :				 51424 instructions
+   Parallelism :				 13.70
+   Burdened parallelism :			 13.70
+   Number of spawns/syncs:			 999
+   Average instructions / strand :		 234
+   Strands along span :				 10
+   Average instructions / strand on span :	 5142
+   Total number of atomic instructions : 	 10
+   Frame count :				 3997
+2) Speedup Estimate
+  2 procs:		 1.78 - 2.00
+  4 procs:		 2.91 - 4.00
+  8 procs:		 4.28 - 8.00
+  16 procs:		 5.59 - 13.70
+  32 procs:		 6.60 - 13.70
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 4,620,601 instructions
+   Span :					 3,754,952 instructions
+   Burdened span :				 4,057,824 instructions
+   Parallelism :				 1.23
+   Burdened parallelism :			 1.14
+   Number of spawns/syncs:			 1,998
+   Average instructions / strand :		 770
+   Strands along span :				 41
+   Average instructions / strand on span :	 91,584
+   Total number of atomic instructions : 	 32
+   Frame count :				 6001
+2) Speedup Estimate
+   2 processors:	 0.80 - 1.23
+   4 processors:	 0.73 - 1.23
+   8 processors:	 0.70 - 1.23
+   16 processors:	 0.68 - 1.23
+   32 processors:	 0.68 - 1.23
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 13.695823 notitle lt 2, "dump-normalM103.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-normalM103.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                         ^
+         "dump-normalM103.plt", line 10: no data point found in specified file
+
+Statistics for dump-normalM104
+
+1) Parallelism Profile
+   Work :					 7802101 instructions
+   Span :					 461015 instructions
+   Burdened span :				 461015 instructions
+   Parallelism :				 16.92
+   Burdened parallelism :			 16.92
+   Number of spawns/syncs:			 9999
+   Average instructions / strand :		 260
+   Strands along span :				 14
+   Average instructions / strand on span :	 32929
+   Total number of atomic instructions : 	 134
+   Frame count :				 39997
+2) Speedup Estimate
+  2 procs:		 1.82 - 2.00
+  4 procs:		 3.07 - 4.00
+  8 procs:		 4.70 - 8.00
+  16 procs:		 6.38 - 16.00
+  32 procs:		 7.78 - 16.92
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 13,644,271 instructions
+   Span :					 4,165,047 instructions
+   Burdened span :				 4,586,912 instructions
+   Parallelism :				 3.28
+   Burdened parallelism :			 2.97
+   Number of spawns/syncs:			 19,998
+   Average instructions / strand :		 227
+   Strands along span :				 55
+   Average instructions / strand on span :	 75,728
+   Total number of atomic instructions : 	 156
+   Frame count :				 60001
+2) Speedup Estimate
+   2 processors:	 1.27 - 2.00
+   4 processors:	 1.47 - 3.28
+   8 processors:	 1.60 - 3.28
+   16 processors:	 1.67 - 3.28
+   32 processors:	 1.71 - 3.28
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 16.923747 notitle lt 2, "dump-normalM104.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-normalM104.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                         ^
+         "dump-normalM104.plt", line 10: no data point found in specified file
+
+Statistics for dump-normalM105
+
+1) Parallelism Profile
+   Work :					 85440690 instructions
+   Span :					 4512079 instructions
+   Burdened span :				 4512079 instructions
+   Parallelism :				 18.94
+   Burdened parallelism :			 18.94
+   Number of spawns/syncs:			 99999
+   Average instructions / strand :		 284
+   Strands along span :				 17
+   Average instructions / strand on span :	 265416
+   Total number of atomic instructions : 	 1028
+   Frame count :				 399997
+2) Speedup Estimate
+  2 procs:		 1.84 - 2.00
+  4 procs:		 3.15 - 4.00
+  8 procs:		 4.91 - 8.00
+  16 procs:		 6.82 - 16.00
+  32 procs:		 8.46 - 18.94
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 110,540,276 instructions
+   Span :					 8,216,793 instructions
+   Burdened span :				 8,728,628 instructions
+   Parallelism :				 13.45
+   Burdened parallelism :			 12.66
+   Number of spawns/syncs:			 199,998
+   Average instructions / strand :		 184
+   Strands along span :				 69
+   Average instructions / strand on span :	 119,083
+   Total number of atomic instructions : 	 1,046
+   Frame count :				 600001
+2) Speedup Estimate
+   2 processors:	 1.76 - 2.00
+   4 processors:	 2.85 - 4.00
+   8 processors:	 4.12 - 8.00
+   16 processors:	 5.31 - 13.45
+   32 processors:	 6.20 - 13.45
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.

@@ -1,0 +1,26 @@
+TACC: Setting memory limits for job 458169 to unlimited KB
+TACC: Dumping job script:
+--------------------------------------------------------------------------------
+#!/bin/bash
+
+#$ -V
+#$ -cwd
+#$ -q development
+#$ -pe 12way 12
+#$ -N pmerge2
+#$ -o pmerge2.out
+#$ -e pmerge2.err
+#$ -M mailforavijit@gmail.com
+#$ -m be
+#$ -l h_rt=01:00:00
+
+export PATH=$PATH:$HOME/cilk/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/cilk/lib
+cilkview m_4_106
+cilkview m_4_107
+--------------------------------------------------------------------------------
+TACC: Done.
+cilkview: generating scalability data
+cilkview: generating scalability data
+TACC: Cleaning up after job: 458169
+TACC: Done.
