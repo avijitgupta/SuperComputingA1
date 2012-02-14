@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <cilk.h>
-#define N 10000000
 #include <cilkview.h>
+#define N 10000000
+
 using namespace std;
 #define MAXM(a,b) (a)>(b)?(a):(b)
 int binarySearch( int value, int a[], int l, int r );
@@ -54,7 +55,8 @@ void merge( int t[], int a[], int p1, int r1, int p2, int r2, int p3 )
     if (l1<l2)
     {
         merge(t,a,p2,r2,p1,r1,p3);
-    }
+	return;
+  }
     
     if (l1==0) return;
     int q1 =(p1+r1)/2;
@@ -72,24 +74,21 @@ int cilk_main()
 {
 	int arr[N];
 	int sorted[N];
-        cilk::cilkview cv;
-
 	srand(time(0));
 	for(int i=0;i<N;i++)
 	{
 		arr[i]=rand()%300;
 		sorted[i]=0;
 	}
-	//cout<<endl;
+//out<<endl;
 	int num;
-
+	cilk::cilkview cv;
 	cv.reset();
         cv.start();
-
 	mergesort(arr,sorted,0, N-1,0);
-	cv.stop();
-        cv.dump("dump-pm103");
 
+	cv.stop();
+        cv.dump("dump-pmerge07");
 #ifdef PRINT	
 	
 	for(int i=0;i<N;i++)

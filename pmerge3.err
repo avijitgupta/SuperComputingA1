@@ -181,3 +181,139 @@ Cilkview Scalability Analyzer V1.1.0, Build 8503
    8 processors:	 7.19 - 8.00
    16 processors:	 12.90 - 16.00
    32 processors:	 21.39 - 32.00
+Statistics for dump-pmerge03
+
+1) Parallelism Profile
+   Work :					 3641763 instructions
+   Span :					 28638 instructions
+   Burdened span :				 28638 instructions
+   Parallelism :				 127.17
+   Burdened parallelism :			 127.17
+   Number of spawns/syncs:			 10975
+   Average instructions / strand :		 110
+   Strands along span :				 89
+   Average instructions / strand on span :	 321
+   Total number of atomic instructions : 	 18
+   Frame count :				 37960
+2) Speedup Estimate
+  2 procs:		 1.97 - 2.00
+  4 procs:		 3.85 - 4.00
+  8 procs:		 7.32 - 8.00
+  16 procs:		 13.33 - 16.00
+  32 procs:		 22.62 - 32.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 7,404,333 instructions
+   Span :					 3,791,208 instructions
+   Burdened span :				 4,971,014 instructions
+   Parallelism :				 1.95
+   Burdened parallelism :			 1.49
+   Number of spawns/syncs:			 10,975
+   Average instructions / strand :		 224
+   Strands along span :				 179
+   Average instructions / strand on span :	 21,179
+   Total number of atomic instructions : 	 34
+   Frame count :				 37963
+2) Speedup Estimate
+   2 processors:	 0.93 - 1.95
+   4 processors:	 0.90 - 1.95
+   8 processors:	 0.89 - 1.95
+   16 processors:	 0.88 - 1.95
+   32 processors:	 0.88 - 1.95
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 127.16541 notitle lt 2, "dump-pmerge03.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-pmerge03.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                     ^
+         "dump-pmerge03.plt", line 10: no data point found in specified file
+
+Statistics for dump-pmerge04
+
+1) Parallelism Profile
+   Work :					 45808826 instructions
+   Span :					 47329 instructions
+   Burdened span :				 47329 instructions
+   Parallelism :				 967.88
+   Burdened parallelism :			 967.88
+   Number of spawns/syncs:			 143615
+   Average instructions / strand :		 106
+   Strands along span :				 150
+   Average instructions / strand on span :	 315
+   Total number of atomic instructions : 	 126
+   Frame count :				 488700
+2) Speedup Estimate
+  2 procs:		 2.00 - 2.00
+  4 procs:		 3.98 - 4.00
+  8 procs:		 7.90 - 8.00
+  16 procs:		 15.59 - 16.00
+  32 procs:		 30.35 - 32.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 50,174,504 instructions
+   Span :					 4,413,007 instructions
+   Burdened span :				 6,418,669 instructions
+   Parallelism :				 11.37
+   Burdened parallelism :			 7.82
+   Number of spawns/syncs:			 143,615
+   Average instructions / strand :		 116
+   Strands along span :				 301
+   Average instructions / strand on span :	 14,661
+   Total number of atomic instructions : 	 142
+   Frame count :				 488703
+2) Speedup Estimate
+   2 processors:	 1.64 - 2.00
+   4 processors:	 2.42 - 4.00
+   8 processors:	 3.17 - 8.00
+   16 processors:	 3.75 - 11.37
+   32 processors:	 4.13 - 11.37
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 967.880707 notitle lt 2, "dump-pmerge04.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-pmerge04.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                      ^
+         "dump-pmerge04.plt", line 10: no data point found in specified file
+
+Statistics for dump-pmerge05
+
+1) Parallelism Profile
+   Work :					 545442865 instructions
+   Span :					 71738 instructions
+   Burdened span :				 71738 instructions
+   Parallelism :				 7603.26
+   Burdened parallelism :			 7603.26
+   Number of spawns/syncs:			 1768927
+   Average instructions / strand :		 102
+   Strands along span :				 231
+   Average instructions / strand on span :	 310
+   Total number of atomic instructions : 	 994
+   Frame count :				 5907089
+2) Speedup Estimate
+  2 procs:		 2.00 - 2.00
+  4 procs:		 4.00 - 4.00
+  8 procs:		 7.99 - 8.00
+  16 procs:		 15.95 - 16.00
+  32 procs:		 31.78 - 32.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 555,834,818 instructions
+   Span :					 10,463,691 instructions
+   Burdened span :				 13,653,741 instructions
+   Parallelism :				 53.12
+   Burdened parallelism :			 40.71
+   Number of spawns/syncs:			 1,768,927
+   Average instructions / strand :		 104
+   Strands along span :				 463
+   Average instructions / strand on span :	 22,599
+   Total number of atomic instructions : 	 1,010
+   Frame count :				 5907092
+2) Speedup Estimate
+   2 processors:	 1.90 - 2.00
+   4 processors:	 3.55 - 4.00
+   8 processors:	 6.19 - 8.00
+   16 processors:	 9.84 - 16.00
+   32 processors:	 13.95 - 32.00

@@ -13,5 +13,6 @@
 
 export PATH=$PATH:$HOME/cilk/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/cilk/lib
-cilkview 4_106 
-cilkview 4_107
+cilkview 4_103
+cilkview 4_104
+cilkview 4_105
