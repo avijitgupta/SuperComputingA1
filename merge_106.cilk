@@ -1,0 +1,82 @@
+#include <iostream>
+#include <cstdlib>
+#include <cilk.h>
+#include <cilkview.h>
+#define N 1000
+
+
+using namespace std;
+void merge(int A[], int B[], int lenA, int lenB);
+int* mergesort(int arr[],int l, int h)
+{
+	if(l==h)
+	{
+		return arr;
+	}
+	
+	int m = (l+h)/2;
+	int *A,*B;
+	A = cilk_spawn mergesort(arr, l, m);
+	B = mergesort(arr+m+1, 0,h-m-1);
+	
+	cilk_sync;
+	
+	merge(A,B,m-l+1, h-m);	
+	return A;		
+}
+
+void merge(int A[], int B[], int lenA, int lenB)
+{
+	int i=0,j=0,k=0;
+	int temp[lenA+lenB];
+	while(i<lenA && j<lenB)
+	{
+		if(A[i]<B[j])
+		{
+			temp[k++] = A[i++];
+		}
+		else
+		{
+			temp[k++] = B[j++];
+		}
+	}
+	
+	while(i<lenA)
+	{
+		temp[k++] = A[i++];
+	}
+	while(j<lenB)
+	{
+		temp[k++] = B[j++];
+	}
+	
+	for(int i=0;i<lenA+lenB;i++)
+	{
+		A[i] = temp[i];
+	}
+}
+
+int cilk_main()
+{
+	int arr[N];
+	srand(time(0));
+	cilk_for(int i=0;i<N;i++)
+	{
+		arr[i]=rand()%300;
+	}
+	cilk::cilkview cv;
+
+	cv.reset();
+        cv.start();
+	int *merged = mergesort(arr,0, N-1);
+	cv.stop();
+        cv.dump("dump-normalM103");
+
+
+#ifdef PRINT	
+	for(int i=0;i<N;i++)
+		cout<<merged[i]<<" ";
+	
+	cout<<endl;
+#endif
+}
