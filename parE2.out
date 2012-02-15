@@ -21,3 +21,5 @@ cilkview 3p_100000 -cilk_set_worker_count=1
 --------------------------------------------------------------------------------
 TACC: Done.
 cilkview: generating scalability data
+TACC: Cleaning up after job: 459811
+TACC: Done.

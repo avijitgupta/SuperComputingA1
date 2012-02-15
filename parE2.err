@@ -1,0 +1,25 @@
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 79 instructions
+   Span :					 3,713,434 instructions
+   Burdened span :				 4,017,714 instructions
+   Parallelism :				 0.00
+   Burdened parallelism :			 0.00
+   Number of spawns/syncs:			 1,057,649,055
+   Average instructions / strand :		 0
+   Strands along span :				 39
+   Average instructions / strand on span :	 95,216
+   Total number of atomic instructions : 	 20
+   Frame count :				 3172847173
+2) Speedup Estimate
+   2 processors:	 0.00 - 0.00
+   4 processors:	 0.00 - 0.00
+   8 processors:	 0.00 - 0.00
+   16 processors:	 0.00 - 0.00
+   32 processors:	 0.00 - 0.00
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+cilkview error: process killed by signal -10
