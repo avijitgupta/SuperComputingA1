@@ -1,3 +1,6 @@
+TACC: Setting memory limits for job 459811 to unlimited KB
+TACC: Dumping job script:
+--------------------------------------------------------------------------------
 #!/bin/bash
 
 #$ -V
@@ -15,3 +18,6 @@ export PATH=$PATH:$HOME/cilk/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/cilk/lib
 cilkview 3p_100000 -cilk_set_worker_count=1
 
+--------------------------------------------------------------------------------
+TACC: Done.
+cilkview: generating scalability data

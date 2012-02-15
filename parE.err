@@ -1,0 +1,218 @@
+Statistics for dump-distance-100
+
+1) Parallelism Profile
+   Work :					 10244575 instructions
+   Span :					 13674 instructions
+   Burdened span :				 13674 instructions
+   Parallelism :				 749.20
+   Burdened parallelism :			 749.20
+   Number of spawns/syncs:			 9999
+   Average instructions / strand :		 341
+   Strands along span :				 14
+   Average instructions / strand on span :	 976
+   Total number of atomic instructions : 	 0
+   Frame count :				 29998
+2) Speedup Estimate
+  2 procs:		 2.00 - 2.00
+  4 procs:		 3.97 - 4.00
+  8 procs:		 7.87 - 8.00
+  16 procs:		 15.47 - 16.00
+  32 procs:		 29.90 - 32.00
+
+Statistics for dump-sum-100
+
+1) Parallelism Profile
+   Work :					 19 instructions
+   Span :					 19 instructions
+   Burdened span :				 19 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 19
+   Strands along span :				 1
+   Average instructions / strand on span :	 19
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+  2 procs:		 0.74 - 1.00
+  4 procs:		 0.66 - 1.00
+  8 procs:		 0.62 - 1.00
+  16 procs:		 0.60 - 1.00
+  32 procs:		 0.60 - 1.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 13,996,706 instructions
+   Span :					 3,732,625 instructions
+   Burdened span :				 4,051,328 instructions
+   Parallelism :				 3.75
+   Burdened parallelism :			 3.45
+   Number of spawns/syncs:			 10,098
+   Average instructions / strand :		 462
+   Strands along span :				 43
+   Average instructions / strand on span :	 86,805
+   Total number of atomic instructions : 	 20
+   Frame count :				 30202
+2) Speedup Estimate
+   2 processors:	 1.34 - 2.00
+   4 processors:	 1.62 - 3.75
+   8 processors:	 1.80 - 3.75
+   16 processors:	 1.91 - 3.75
+   32 processors:	 1.97 - 3.75
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 1. notitle lt 2, "dump-sum-100.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-sum-100.csv" using 1:4 with points pt 1 title "trials"
+                                                                               
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 749.201038 notitle lt 2, "dump-distance-100.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-distance-100.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                                                        ^
+                   "dump-sum-100.plt", line 10:  no data point found in specified file 
+
+                                                                                       ^
+         "dump-distance-100.plt", line 10: no data point found in specified file
+
+Statistics for dump-distance-1000
+
+1) Parallelism Profile
+   Work :					 1041967445 instructions
+   Span :					 275830 instructions
+   Burdened span :				 275830 instructions
+   Parallelism :				 3777.57
+   Burdened parallelism :			 3777.57
+   Number of spawns/syncs:			 999999
+   Average instructions / strand :		 347
+   Strands along span :				 20
+   Average instructions / strand on span :	 13791
+   Total number of atomic instructions : 	 0
+   Frame count :				 2999998
+2) Speedup Estimate
+  2 procs:		 2.00 - 2.00
+  4 procs:		 3.99 - 4.00
+  8 procs:		 7.97 - 8.00
+  16 procs:		 15.89 - 16.00
+  32 procs:		 31.56 - 32.00
+
+Statistics for dump-sum-1000
+
+1) Parallelism Profile
+   Work :					 19 instructions
+   Span :					 19 instructions
+   Burdened span :				 19 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 19
+   Strands along span :				 1
+   Average instructions / strand on span :	 19
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+  2 procs:		 0.74 - 1.00
+  4 procs:		 0.66 - 1.00
+  8 procs:		 0.62 - 1.00
+  16 procs:		 0.60 - 1.00
+  32 procs:		 0.60 - 1.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 1,046,028,577 instructions
+   Span :					 3,996,375 instructions
+   Burdened span :				 4,390,924 instructions
+   Parallelism :				 261.74
+   Burdened parallelism :			 238.23
+   Number of spawns/syncs:			 1,000,998
+   Average instructions / strand :		 348
+   Strands along span :				 61
+   Average instructions / strand on span :	 65,514
+   Total number of atomic instructions : 	 20
+   Frame count :				 3002002
+2) Speedup Estimate
+   2 processors:	 1.90 - 2.00
+   4 processors:	 3.80 - 4.00
+   8 processors:	 7.60 - 8.00
+   16 processors:	 14.45 - 16.00
+   32 processors:	 26.20 - 32.00
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 1. notitle lt 2, "dump-sum-1000.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-sum-1000.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                              ^
+         "dump-sum-1000.plt", line 10: no data point found in specified file
+
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 3777.571131 notitle lt 2, "dump-distance-1000.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-distance-1000.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                                 ^
+         "dump-distance-1000.plt", line 10: no data point found in specified file
+
+Statistics for dump-distance-10-4
+
+1) Parallelism Profile
+   Work :					 104831096853 instructions
+   Span :					 538973 instructions
+   Burdened span :				 538973 instructions
+   Parallelism :				 194501.57
+   Burdened parallelism :			 194501.57
+   Number of spawns/syncs:			 99999999
+   Average instructions / strand :		 349
+   Strands along span :				 27
+   Average instructions / strand on span :	 19961
+   Total number of atomic instructions : 	 0
+   Frame count :				 299999998
+2) Speedup Estimate
+  2 procs:		 2.00 - 2.00
+  4 procs:		 4.00 - 4.00
+  8 procs:		 8.00 - 8.00
+  16 procs:		 16.00 - 16.00
+  32 procs:		 31.99 - 32.00
+
+Statistics for dump-sum-10-4
+
+1) Parallelism Profile
+   Work :					 19 instructions
+   Span :					 19 instructions
+   Burdened span :				 19 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 19
+   Strands along span :				 1
+   Average instructions / strand on span :	 19
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+  2 procs:		 0.74 - 1.00
+  4 procs:		 0.66 - 1.00
+  8 procs:		 0.62 - 1.00
+  16 procs:		 0.60 - 1.00
+  32 procs:		 0.60 - 1.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 104,838,234,628 instructions
+   Span :					 4,259,383 instructions
+   Burdened span :				 4,728,827 instructions
+   Parallelism :				 24613.48
+   Burdened parallelism :			 22170.03
+   Number of spawns/syncs:			 100,009,998
+   Average instructions / strand :		 349
+   Strands along span :				 81
+   Average instructions / strand on span :	 52,584
+   Total number of atomic instructions : 	 20
+   Frame count :				 300020002
+2) Speedup Estimate
+   2 processors:	 1.90 - 2.00
+   4 processors:	 3.80 - 4.00
+   8 processors:	 7.60 - 8.00
+   16 processors:	 15.20 - 16.00
+   32 processors:	 30.40 - 32.00
+
+* Note: Analysis forces "grainsize=1" for cilk_for loops that use a default grainsize.
+        For details, refer to the "cilk_for" section of the Cilk++ Programmer's Guide.
