@@ -317,3 +317,139 @@ Cilkview Scalability Analyzer V1.1.0, Build 8503
    8 processors:	 6.19 - 8.00
    16 processors:	 9.84 - 16.00
    32 processors:	 13.95 - 32.00
+Statistics for dump-3serial
+
+1) Parallelism Profile
+   Work :					 7416906 instructions
+   Span :					 7416906 instructions
+   Burdened span :				 7416906 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 7416906
+   Strands along span :				 1
+   Average instructions / strand on span :	 7416906
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+  2 procs:		 0.74 - 1.00
+  4 procs:		 0.66 - 1.00
+  8 procs:		 0.62 - 1.00
+  16 procs:		 0.60 - 1.00
+  32 procs:		 0.60 - 1.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 10,824,785 instructions
+   Span :					 10,824,785 instructions
+   Burdened span :				 10,824,785 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 10,824,785
+   Strands along span :				 1
+   Average instructions / strand on span :	 10,824,785
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+   2 processors:	 0.74 - 1.00
+   4 processors:	 0.66 - 1.00
+   8 processors:	 0.62 - 1.00
+   16 processors:	 0.60 - 1.00
+   32 processors:	 0.60 - 1.00
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 1. notitle lt 2, "dump-3serial.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-3serial.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                            ^
+         "dump-3serial.plt", line 10: no data point found in specified file
+
+Statistics for dump-3serial-1000
+
+1) Parallelism Profile
+   Work :					 760089574 instructions
+   Span :					 760089574 instructions
+   Burdened span :				 760089574 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 760089574
+   Strands along span :				 1
+   Average instructions / strand on span :	 760089574
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+  2 procs:		 0.74 - 1.00
+  4 procs:		 0.66 - 1.00
+  8 procs:		 0.62 - 1.00
+  16 procs:		 0.60 - 1.00
+  32 procs:		 0.60 - 1.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 763,661,178 instructions
+   Span :					 763,661,178 instructions
+   Burdened span :				 763,661,178 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 763,661,178
+   Strands along span :				 1
+   Average instructions / strand on span :	 763,661,178
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+   2 processors:	 0.74 - 1.00
+   4 processors:	 0.66 - 1.00
+   8 processors:	 0.62 - 1.00
+   16 processors:	 0.60 - 1.00
+   32 processors:	 0.60 - 1.00
+
+gnuplot> plot [0:16] [0:16] x title "parallelism" lt 2, 1. notitle lt 2, "dump-3serial-1000.csv" using 1:2 title "burdened speedup" with lines lt 1, "dump-3serial-1000.csv" using 1:4 with points pt 1 title "trials"
+                                                                                                                                                                                                                      ^
+         "dump-3serial-1000.plt", line 10: no data point found in specified file
+
+Statistics for dump-3serial-10-4
+
+1) Parallelism Profile
+   Work :					 76632316982 instructions
+   Span :					 76632316982 instructions
+   Burdened span :				 76632316982 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 76632316982
+   Strands along span :				 1
+   Average instructions / strand on span :	 76632316982
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+  2 procs:		 0.74 - 1.00
+  4 procs:		 0.66 - 1.00
+  8 procs:		 0.62 - 1.00
+  16 procs:		 0.60 - 1.00
+  32 procs:		 0.60 - 1.00
+
+Whole Program Statistics:
+
+Cilkview Scalability Analyzer V1.1.0, Build 8503
+1) Parallelism Profile
+   Work :					 76,637,525,772 instructions
+   Span :					 76,637,525,772 instructions
+   Burdened span :				 76,637,525,772 instructions
+   Parallelism :				 1.00
+   Burdened parallelism :			 1.00
+   Number of spawns/syncs:			 0
+   Average instructions / strand :		 76,637,525,772
+   Strands along span :				 1
+   Average instructions / strand on span :	 76,637,525,772
+   Total number of atomic instructions : 	 0
+   Frame count :				 0
+2) Speedup Estimate
+   2 processors:	 0.74 - 1.00
+   4 processors:	 0.66 - 1.00
+   8 processors:	 0.62 - 1.00
+   16 processors:	 0.60 - 1.00
+   32 processors:	 0.60 - 1.00

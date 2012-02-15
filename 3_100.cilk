@@ -1,0 +1,85 @@
+#include <iostream>
+#include <cilk.h>
+#include <cstdlib>
+#include <math.h>
+#include <reducer_opadd.h>
+#include <cilkview.h>
+#define N 100
+using namespace std;
+//double arr[N*N];
+double E=0;
+double calculateSerialDistance();
+
+void calculateDistance(int l, int h);
+struct points
+{
+	int x;
+	int y;
+	int z;
+}p[N];
+
+	cilk::reducer_opadd<double> result(0);
+int cilk_main()
+{
+	int i;
+	cilk_for(int i=0;i<N;i++)
+	{
+		p[i].x = rand()%40+1;
+		p[i].y = rand()%40+1;
+		p[i].z = rand()%40+1;
+	}
+	cilk::cilkview cv;
+
+	cv.reset();
+	cv.start();
+	calculateDistance(0,N*N-1);
+	cv.stop();
+	cv.dump("dump-distance");
+	
+	cv.reset();
+	cv.start();
+	//cilk_for (int i = 0; i < N*N-1 ; ++ i )
+	//result += arr[i];
+//	cout<< result.get_value()<<endl;
+	cv.stop();
+	cv.dump("dump-sum");
+//	cout<<endl<<calculateSerialDistance();	
+}
+
+void calculateDistance(int l, int h)
+{
+	if(l==h) return;
+	int m = (l+h)/2;
+	int r = m/N;
+	int c = m%N;
+	//cout<<"L "<<l<<"H "<<h<<"M "<<m<<endl;
+	if(r!=c)
+	{
+	//	cout<<p[r].x<<" "<<p[r].y<<" "<<p[r].z<<endl<<p[c].x<<" "<<p[c].y<<" "<<p[c].z<<endl<<endl;
+		double d = sqrt((p[r].x-p[c].x)*(p[r].x-p[c].x) + (p[r].y-p[c].y)*(p[r].y-p[c].y) + (p[r].z-p[c].z)*(p[r].z-p[c].z));
+	//	arr[m]=(1.0/(pow(d,12) - 1.0/pow(d,6)));
+		result+=(1.0/(pow(d,12) - 1.0/pow(d,6)));
+	}
+	cilk_spawn calculateDistance(l, m);
+	calculateDistance(m+1, h);
+	cilk_sync;
+}
+
+double calculateSerialDistance()
+{
+        int r,c;
+        for(r=0;r<N;r++)
+        {
+                for(c=0;c<N;c++)
+                {
+                        if(r!=c)
+                        {
+                        double d = sqrt((p[r].x-p[c].x)*(p[r].x-p[c].x) + (p[r].y-p[c].y)*(p[r].y-p[c].y) + (p[r].z-p[c].z)*(p[r].z-p[c].z));
+                        E+=(1.0/(pow(d,12) - 1.0/pow(d,6)));
+                        }
+                }
+        }
+        return E;
+}
+
+
